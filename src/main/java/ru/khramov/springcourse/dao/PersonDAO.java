@@ -12,7 +12,7 @@ import java.util.List;
 public class PersonDAO {
     private static int PEOPLE_COUNT;
 
-    private static final String URL = "jdbc:postgresql://localhost:5432/first_db";
+    private static final String URL = "jdbc:mysql://localhost:3306/Person";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "springcourse";
 
@@ -20,7 +20,7 @@ public class PersonDAO {
 
     static {
         try {
-            Class.forName("org.postgresql.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
